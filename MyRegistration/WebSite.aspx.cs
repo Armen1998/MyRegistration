@@ -13,22 +13,19 @@ namespace MyRegistration
 {
     public partial class WebSite : System.Web.UI.Page
     {
-        SqlConnection sqlcon = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
-        public string Text_Name { get { return txtbox_Name.Text; } }
-         protected void Page_Load(object sender, EventArgs e)
+        //SqlConnection sqlcon = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+        //public string Text_Name { get { return txtbox_Name.Text; } set { txtbox_Name.Text = value; } }
+        //public string Text_Surname { get { return txtbox_Surname.Text; } set { txtbox_Surname.Text = value; } }
+        //public string Text_Kirmex { get { return listbox_kirmex.Text; } set { listbox_kirmex.Text = value; } }
+        //public string Text_Matlab { get { return listbox_matlab.Text; } set { listbox_matlab.Text = value; } }
+        //public string Text_Matanal { get { return listbox_matanal.Text; } set { listbox_matanal.Text = value; } }
+
+        protected void Page_Load(object sender, EventArgs e)
         {
             MyRegistration.AddItems.Additems(listbox_kirmex, listbox_matanal, listbox_matlab);
             
         }
-        protected void Reset()
-        {
-        
-            txtbox_Name.Text = "";
-            txtbox_Surname.Text = "";
-            listbox_kirmex.Text = "1";
-            listbox_matanal.Text = "1";
-            listbox_matlab.Text = "1";
-        }
+       
         protected void btn_submit_Click(object sender, EventArgs e)
         {
             if (txtbox_Name.Text != "" && txtbox_Surname.Text != "")
@@ -39,19 +36,11 @@ namespace MyRegistration
                 //sqlcon.Close();
                 //Response.Write("Registration was succesfuul");
                 //Reset();
-                MyregClassDataContext myregclass = new MyregClassDataContext();
-                Myregistre myreg = new Myregistre();
-                myreg.Name = txtbox_Name.Text;
-                myreg.Surname = txtbox_Surname.Text;
-                myreg.Matlab = Convert.ToInt32(listbox_matlab.Text);
-                myreg.Kirmex = Convert.ToInt32(listbox_kirmex.Text);
-                myreg.MathAnaliz = Convert.ToInt32(listbox_matanal.Text);
-                myregclass.Myregistres.InsertOnSubmit(myreg);
-                myregclass.SubmitChanges();
+                Insert.insert(txtbox_Name,txtbox_Surname,listbox_matlab,listbox_kirmex,listbox_matanal);
                 Response.Write("Registration was succesfuul");
-                Reset();
+                Reset.reset(txtbox_Name, txtbox_Surname, listbox_matlab, listbox_kirmex, listbox_matanal);
             }
-            else Response.Write("Name and Surnamer are required");
+            else Response.Write("Name and Surname are required");
         }
 
         protected void btn_showdata_Click(object sender, EventArgs e)
