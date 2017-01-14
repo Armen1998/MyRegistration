@@ -32,10 +32,21 @@ namespace MyRegistration
         {
             if (txtbox_Name.Text != "" && txtbox_Surname.Text != "")
             {
-                sqlcon.Open();
-                SqlCommand cmd = new SqlCommand("insert into Myregistre values('" + txtbox_Name.Text + "','" + txtbox_Surname.Text + "','" + listbox_matanal.Text + "','" + listbox_matlab.Text + "','" + listbox_kirmex.Text + "')", sqlcon);
-                cmd.ExecuteNonQuery();
-                sqlcon.Close();            
+                //sqlcon.Open();
+                //SqlCommand cmd = new SqlCommand("insert into Myregistre values('" + txtbox_Name.Text + "','" + txtbox_Surname.Text + "','" + listbox_matanal.Text + "','" + listbox_matlab.Text + "','" + listbox_kirmex.Text + "')", sqlcon);
+                //cmd.ExecuteNonQuery();
+                //sqlcon.Close();            
+                //Response.Write("Registration was succesfuul");
+                //Reset();
+                RegistreClassDataContext regclass = new RegistreClassDataContext();
+                Myregistre myreg = new Myregistre();
+                myreg.Name = txtbox_Name.Text;
+                myreg.Surname = txtbox_Surname.Text;
+                myreg.Matlab = Convert.ToInt32(listbox_matlab.Text);
+                myreg.Kirmex = Convert.ToInt32(listbox_kirmex.Text);
+                myreg.MathAnaliz = Convert.ToInt32(listbox_matanal.Text);
+                regclass.Myregistres.InsertOnSubmit(myreg);
+                regclass.SubmitChanges();
                 Response.Write("Registration was succesfuul");
                 Reset();
             }
