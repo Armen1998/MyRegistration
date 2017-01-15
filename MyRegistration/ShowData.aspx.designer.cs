@@ -67,15 +67,6 @@ namespace MyRegistration {
         protected global::System.Web.UI.WebControls.Button btn_sort_Click;
         
         /// <summary>
-        /// Panel1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel Panel1;
-        
-        /// <summary>
         /// radio_btn_kirmex control.
         /// </summary>
         /// <remarks>
@@ -110,14 +101,5 @@ namespace MyRegistration {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btn_selectforsort;
-        
-        /// <summary>
-        /// GridViewSort control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridViewSort;
     }
 }

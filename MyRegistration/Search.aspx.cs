@@ -28,11 +28,12 @@ namespace MyRegistration
             //GridViewSearch.DataSource = sqlcom.ExecuteReader();
             //GridViewSearch.DataBind();
             MyregClassDataContext myrcsc = new MyregClassDataContext();
-            Myregistre myreg = new Myregistre();
-            var data = from a in myrcsc.Myregistres
-                       where a.Name == txt_fname_search.Text && a.Surname == txt_lname_search.Text
+            // Myregistre myreg = new Myregistre();
+            GridViewSearch.DataSource = from a in myrcsc.Myregistres
+                       where a.Name == txt_fname_search.Text && a.Surname == txt_lname_search.Text 
+                       orderby a.Kirmex descending
                        select new { a.Name,a.Surname,a.Kirmex,a.MathAnaliz,a.Matlab } ;
-            GridViewSearch.DataSource = data;
+    
             GridViewSearch.DataBind();
             GridViewSearch.Visible = true; 
         }

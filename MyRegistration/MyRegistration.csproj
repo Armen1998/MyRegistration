@@ -97,6 +97,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="DataSort.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -129,6 +130,13 @@
   <ItemGroup>
     <Compile Include="AddItems.cs" />
     <Compile Include="ClassForSort.cs" />
+    <Compile Include="DataSort.aspx.cs">
+      <DependentUpon>DataSort.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataSort.aspx.designer.cs">
+      <DependentUpon>DataSort.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Insert.cs" />
     <Compile Include="MyregClass.cs">
       <DependentUpon>MyregClass.dbml</DependentUpon>

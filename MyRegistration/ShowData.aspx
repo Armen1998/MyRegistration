@@ -27,11 +27,11 @@
             width: 179px;
         }
         .auto-style9 {
-            width: 214px;
+            width: 443px;
         }
         .auto-style10 {
             height: 23px;
-            width: 214px;
+            width: 443px;
         }
     </style>
 </head>
@@ -74,13 +74,7 @@
             </tr>
             <tr>
                 <td class="auto-style10">
-                    <asp:Panel ID="Panel1" runat="server" Height="23px" Width="400px">
-                        &nbsp;<asp:RadioButton ID="radio_btn_kirmex" runat="server" Text="By Kirmex" />
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:RadioButton ID="radio_btn_matlab" runat="server" Text="By Matlab" />
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:RadioButton ID="radio_btn_matanal" runat="server" Text="By Math Analiz" />
-                    </asp:Panel>
-                </td>
+                    &nbsp;</td>
                 <td class="auto-style6">
                     &nbsp;</td>
                 <td class="auto-style8">
@@ -90,7 +84,12 @@
             </tr>
             <tr>
                 <td class="auto-style9">
-                    &nbsp;</td>
+                    <asp:RadioButton ID="radio_btn_kirmex" GroupName="Sort" runat="server" Text="By Kirmex" />
+                        &nbsp;&nbsp;&nbsp;
+                        <asp:RadioButton ID="radio_btn_matlab" GroupName="Sort" runat="server" Text="By Matlab" />
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:RadioButton ID="radio_btn_matanal" GroupName="Sort" runat="server" Text="By Math Analiz" />
+                    </td>
                 <td class="auto-style5">
                     &nbsp;</td>
                 <td class="auto-style7">
@@ -100,7 +99,7 @@
             </tr>
             <tr>
                 <td class="auto-style9">
-                    <asp:Button ID="btn_selectforsort" runat="server" OnClick="btn_selectforsort_Click" Text="Select" Width="107px" />
+                    <asp:Button ID="btn_selectforsort" runat="server" OnClick="btn_selectforsort_Click" Text="Select" Width="107px" style="height: 26px" />
                 </td>
                 <td class="auto-style5">
                     &nbsp;</td>
@@ -121,26 +120,7 @@
             </tr>
             <tr>
                 <td class="auto-style9">
-                    <asp:GridView ID="GridViewSort" runat="server" AllowPaging="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataSourceID="SqlDataMyregistration" GridLines="Vertical">
-                        <AlternatingRowStyle BackColor="#DCDCDC" />
-                        <Columns>
-                            <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
-                            <asp:BoundField DataField="Surname" HeaderText="Surname" SortExpression="Surname" />
-                            <asp:BoundField DataField="MathAnaliz" HeaderText="MathAnaliz" SortExpression="MathAnaliz" />
-                            <asp:BoundField DataField="Kirmex" HeaderText="Kirmex" SortExpression="Kirmex" />
-                            <asp:BoundField DataField="Matlab" HeaderText="Matlab" SortExpression="Matlab" />
-                        </Columns>
-                        <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
-                        <HeaderStyle BackColor="#000084" Font-Bold="True" ForeColor="White" />
-                        <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
-                        <RowStyle BackColor="#EEEEEE" ForeColor="Black" />
-                        <SelectedRowStyle BackColor="#008A8C" Font-Bold="True" ForeColor="White" />
-                        <SortedAscendingCellStyle BackColor="#F1F1F1" />
-                        <SortedAscendingHeaderStyle BackColor="#0000A9" />
-                        <SortedDescendingCellStyle BackColor="#CAC9C9" />
-                        <SortedDescendingHeaderStyle BackColor="#000065" />
-                    </asp:GridView>
-                </td>
+                    &nbsp;</td>
                 <td class="auto-style5">
                     &nbsp;</td>
                 <td class="auto-style7">

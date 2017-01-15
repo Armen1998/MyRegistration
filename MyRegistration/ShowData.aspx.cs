@@ -19,11 +19,10 @@ namespace MyRegistration
         protected void Page_Load(object sender, EventArgs e)
         {
             radio_btn_kirmex.Visible = false;
-            radio_btn_kirmex.Checked = true;
+         // radio_btn_kirmex.Checked = true;
             radio_btn_matanal.Visible = false;
             radio_btn_matlab.Visible = false;
             btn_selectforsort.Visible = false;
-            GridViewSort.Visible = false;
 
         }
        
@@ -44,17 +43,17 @@ namespace MyRegistration
             radio_btn_matlab.Visible = true;
             btn_selectforsort.Visible = true;
         }
+       
 
         protected void btn_selectforsort_Click(object sender, EventArgs e)
         {
-            ClassForSort clfs = new ClassForSort(GridViewSort);
-            ClassForSort clfs2 = new ClassForSort(radio_btn_kirmex,radio_btn_matlab,radio_btn_matanal);
-            GridViewSort.Visible = true;
-            radio_btn_kirmex.Visible = true;
-            radio_btn_matanal.Visible = true;
-            radio_btn_matlab.Visible = true;
-            btn_selectforsort.Visible = true;
-            clfs2.SortByKirmex();
+            
+            
+            if (radio_btn_kirmex.Checked == true) DataSort.a = 1;
+            else if (radio_btn_matanal.Checked == true) DataSort.a = 2;
+            else if (radio_btn_matlab.Checked == true) DataSort.a = 3;
+            //NumberChecked();
+            Response.Redirect("DataSort.aspx");
         }
     }
 }

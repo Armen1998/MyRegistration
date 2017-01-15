@@ -13,58 +13,38 @@ namespace MyRegistration
 {
     public class ClassForSort
     {
-        RadioButton radb1, radb2, radb3;
-        GridView grid = new GridView();
-        // ShowSortedData shsortdata = new ShowSortedData();
+        
         MyregClassDataContext myregdata = new MyregClassDataContext();
         Myregistre myreg = new Myregistre();
-        public ClassForSort(RadioButton radb1,RadioButton radb2,RadioButton radb3)
+        
+      
+        public ClassForSort()
         {
-            this.radb1 = radb1;
-            this.radb2 = radb2;
-            this.radb3 = radb3;
+
         }
-        public ClassForSort(GridView gridforshowsortdata)
-        {
-            grid = gridforshowsortdata;
-        }
-        public RadioButton IsChecked()
-        {
-            RadioButton radio = new RadioButton();
-            if (radb1.Checked == true) radio = radb1;
-            else if (radb2.Checked == true) radio = radb2;
-            else if (radb3.Checked == true) radio = radb3;
-            return radio;
-        }
-        public void Sort()
-        {
-            if (IsChecked() == radb1) SortByKirmex();
-            if (IsChecked() == radb2) SortByMatanal();
-            if (IsChecked() == radb3) SortByMatlab();
-                        
-        }
-        public void SortByKirmex()
+        
+        public void SortByKirmex(ref GridView grid)
         {
             var data = from a in myregdata.Myregistres
-                       orderby a.Kirmex, a.Name, a.Surname descending                      
-                       select a.Kirmex;           
+                       orderby a.Kirmex descending               
+                       select new { a.Name, a.Surname, a.Kirmex, a.Matlab, a.MathAnaliz };
             grid.DataSource = data;
             grid.DataBind();
-            grid.Visible = true;
+           
         }
-        public void SortByMatlab()
+        public void SortByMatlab(ref GridView grid)
         {
             var data = from a in myregdata.Myregistres
-                       orderby a.Matlab, a.Name, a.Surname descending
-                       select a;
+                       orderby a.Matlab descending
+                       select new { a.Name, a.Surname,  a.Matlab, a.Kirmex, a.MathAnaliz };
             grid.DataSource = data;
             grid.DataBind();
         }
-        public void SortByMatanal()
+        public void SortByMatanal(ref GridView grid)
         {
             var data = from a in myregdata.Myregistres
-                       orderby a.MathAnaliz, a.Name, a.Surname descending
-                       select a;
+                       orderby a.MathAnaliz descending
+                       select new { a.Name, a.Surname, a.MathAnaliz, a.Matlab, a.Kirmex  };
             grid.DataSource = data;
             grid.DataBind();
         }
