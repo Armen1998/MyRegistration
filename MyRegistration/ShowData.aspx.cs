@@ -13,13 +13,11 @@ namespace MyRegistration
 {
     public partial class ShowData : System.Web.UI.Page
     {
-        //  SqlConnection sqlcon = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
-       
-        
+          
         protected void Page_Load(object sender, EventArgs e)
         {
             radio_btn_kirmex.Visible = false;
-         // radio_btn_kirmex.Checked = true;
+            radio_btn_kirmex.Checked = true;
             radio_btn_matanal.Visible = false;
             radio_btn_matlab.Visible = false;
             btn_selectforsort.Visible = false;
@@ -47,12 +45,10 @@ namespace MyRegistration
 
         protected void btn_selectforsort_Click(object sender, EventArgs e)
         {
-            
-            
+        
             if (radio_btn_kirmex.Checked == true) DataSort.a = 1;
             else if (radio_btn_matanal.Checked == true) DataSort.a = 2;
             else if (radio_btn_matlab.Checked == true) DataSort.a = 3;
-            //NumberChecked();
             Response.Redirect("DataSort.aspx");
         }
     }

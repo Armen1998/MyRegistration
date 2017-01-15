@@ -22,18 +22,6 @@ namespace MyRegistration
             else if (a == 3) forsort.SortByMatlab(ref GridViewDataSort);       
         }
 
-        //public void Kirmex()
-        //{
-        //    forsort.SortByKirmex(ref GridViewDataSort);
-        //}
-        //public void Math()
-        //{
-        //    forsort.SortByMatanal(ref GridViewDataSort);
-        //}
-        //public void Matlab()
-        //{
-        //    forsort.SortByMatlab(ref GridViewDataSort);
-        //}
         protected void Button1_Click(object sender, EventArgs e)
         {
             Response.Redirect("ShowData.aspx");

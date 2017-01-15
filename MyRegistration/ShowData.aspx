@@ -60,10 +60,10 @@
             <SortedDescendingCellStyle BackColor="#CAC9C9" />
             <SortedDescendingHeaderStyle BackColor="#33276A" />
         </asp:GridView>
-        <asp:Button ID="btn_back" runat="server" OnClick="btn_back_Click" Text="Back" Width="101px" />
-        <asp:Button ID="btn_search" runat="server" Text="Search" Width="99px" OnClick="btn_search_Click" Height="26px" />
+        <asp:Button ID="btn_back" runat="server" OnClick="btn_back_Click" Text="Back" Width="101px" BorderColor="#CCCCCC" BorderStyle="Double" />
+        <asp:Button ID="btn_search" runat="server" Text="Search" Width="78px" OnClick="btn_search_Click" Height="26px" BorderColor="#CCCCCC" BorderStyle="Double" />
 
-        <asp:Button ID="btn_sort_Click" runat="server" OnClick="btn_sort_Click_Click" Text="Sort" Width="77px" />
+        <asp:Button ID="btn_sort_Click" runat="server" OnClick="btn_sort_Click_Click" Text="Sort" Width="77px" BorderColor="#CCCCCC" BorderStyle="Double" />
 
         <table class="auto-style1">
             <tr>
@@ -99,7 +99,7 @@
             </tr>
             <tr>
                 <td class="auto-style9">
-                    <asp:Button ID="btn_selectforsort" runat="server" OnClick="btn_selectforsort_Click" Text="Select" Width="107px" style="height: 26px" />
+                    <asp:Button ID="btn_selectforsort" runat="server" OnClick="btn_selectforsort_Click" Text="Select" Width="107px" style="height: 26px" BorderColor="#CCCCCC" BorderStyle="Double" />
                 </td>
                 <td class="auto-style5">
                     &nbsp;</td>

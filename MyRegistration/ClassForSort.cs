@@ -16,13 +16,7 @@ namespace MyRegistration
         
         MyregClassDataContext myregdata = new MyregClassDataContext();
         Myregistre myreg = new Myregistre();
-        
-      
-        public ClassForSort()
-        {
-
-        }
-        
+     
         public void SortByKirmex(ref GridView grid)
         {
             var data = from a in myregdata.Myregistres
