@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Sort.aspx.cs" Inherits="MyRegistration.SortTable" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ShowSortedData.aspx.cs" Inherits="MyRegistration.ShowSortedData" %>
 
 <!DOCTYPE html>
 

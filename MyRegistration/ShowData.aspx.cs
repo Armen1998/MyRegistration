@@ -13,11 +13,20 @@ namespace MyRegistration
 {
     public partial class ShowData : System.Web.UI.Page
     {
-        SqlConnection sqlcon = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+        //  SqlConnection sqlcon = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+       
+        
         protected void Page_Load(object sender, EventArgs e)
         {
+            radio_btn_kirmex.Visible = false;
+            radio_btn_kirmex.Checked = true;
+            radio_btn_matanal.Visible = false;
+            radio_btn_matlab.Visible = false;
+            btn_selectforsort.Visible = false;
+            GridViewSort.Visible = false;
 
         }
+       
         protected void btn_back_Click(object sender, EventArgs e)
         {
             Response.Redirect("WebSite.aspx");
@@ -28,9 +37,24 @@ namespace MyRegistration
             Response.Redirect("Search.aspx");
         }
 
-        protected void btn_sort_Click(object sender, EventArgs e)
+        protected void btn_sort_Click_Click(object sender, EventArgs e)
         {
-            
+            radio_btn_kirmex.Visible = true;
+            radio_btn_matanal.Visible = true;
+            radio_btn_matlab.Visible = true;
+            btn_selectforsort.Visible = true;
+        }
+
+        protected void btn_selectforsort_Click(object sender, EventArgs e)
+        {
+            ClassForSort clfs = new ClassForSort(GridViewSort);
+            ClassForSort clfs2 = new ClassForSort(radio_btn_kirmex,radio_btn_matlab,radio_btn_matanal);
+            GridViewSort.Visible = true;
+            radio_btn_kirmex.Visible = true;
+            radio_btn_matanal.Visible = true;
+            radio_btn_matlab.Visible = true;
+            btn_selectforsort.Visible = true;
+            clfs2.SortByKirmex();
         }
     }
 }

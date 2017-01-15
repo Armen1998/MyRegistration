@@ -14,16 +14,16 @@ namespace MyRegistration
     public partial class WebSite : System.Web.UI.Page
     {
         //SqlConnection sqlcon = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
-        //public string Text_Name { get { return txtbox_Name.Text; } set { txtbox_Name.Text = value; } }
-        //public string Text_Surname { get { return txtbox_Surname.Text; } set { txtbox_Surname.Text = value; } }
-        //public string Text_Kirmex { get { return listbox_kirmex.Text; } set { listbox_kirmex.Text = value; } }
-        //public string Text_Matlab { get { return listbox_matlab.Text; } set { listbox_matlab.Text = value; } }
-        //public string Text_Matanal { get { return listbox_matanal.Text; } set { listbox_matanal.Text = value; } }
+        public string Text_Name { get { return txtbox_Name.Text; } set { txtbox_Name.Text = value; } }
+        public string Text_Surname { get { return txtbox_Surname.Text; } set { txtbox_Surname.Text = value; } }
+        public string Text_Kirmex { get { return listbox_kirmex.Text; } set { listbox_kirmex.Text = value; } }
+        public string Text_Matlab { get { return listbox_matlab.Text; } set { listbox_matlab.Text = value; } }
+        public string Text_Matanal { get { return listbox_matanal.Text; } set { listbox_matanal.Text = value; } }
 
         protected void Page_Load(object sender, EventArgs e)
         {
             MyRegistration.AddItems.Additems(listbox_kirmex, listbox_matanal, listbox_matlab);
-            
+                        
         }
        
         protected void btn_submit_Click(object sender, EventArgs e)

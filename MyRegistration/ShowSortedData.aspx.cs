@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace MyRegistration
 {
-    public partial class SortTable : System.Web.UI.Page
+    public partial class ShowSortedData : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

@@ -10,7 +10,7 @@
 namespace MyRegistration {
     
     
-    public partial class Sort {
+    public partial class SortTable {
         
         /// <summary>
         /// form1 control.

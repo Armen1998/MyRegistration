@@ -58,30 +58,66 @@ namespace MyRegistration {
         protected global::System.Web.UI.WebControls.Button btn_search;
         
         /// <summary>
-        /// btn_sort control.
+        /// btn_sort_Click control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_sort;
+        protected global::System.Web.UI.WebControls.Button btn_sort_Click;
         
         /// <summary>
-        /// SqlDataSourceSort control.
+        /// Panel1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourceSort;
+        protected global::System.Web.UI.WebControls.Panel Panel1;
         
         /// <summary>
-        /// GridView2 control.
+        /// radio_btn_kirmex control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView2;
+        protected global::System.Web.UI.WebControls.RadioButton radio_btn_kirmex;
+        
+        /// <summary>
+        /// radio_btn_matlab control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton radio_btn_matlab;
+        
+        /// <summary>
+        /// radio_btn_matanal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton radio_btn_matanal;
+        
+        /// <summary>
+        /// btn_selectforsort control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_selectforsort;
+        
+        /// <summary>
+        /// GridViewSort control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridViewSort;
     }
 }

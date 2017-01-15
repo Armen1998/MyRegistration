@@ -119,6 +119,7 @@
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Search.aspx" />
     <Content Include="ShowData.aspx" />
+    <Content Include="ShowSortedData.aspx" />
     <Content Include="Sort.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -127,6 +128,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddItems.cs" />
+    <Compile Include="ClassForSort.cs" />
     <Compile Include="Insert.cs" />
     <Compile Include="MyregClass.cs">
       <DependentUpon>MyregClass.dbml</DependentUpon>
@@ -151,6 +153,13 @@
     </Compile>
     <Compile Include="ShowData.aspx.designer.cs">
       <DependentUpon>ShowData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ShowSortedData.aspx.cs">
+      <DependentUpon>ShowSortedData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShowSortedData.aspx.designer.cs">
+      <DependentUpon>ShowSortedData.aspx</DependentUpon>
     </Compile>
     <Compile Include="Sort.aspx.cs">
       <DependentUpon>Sort.aspx</DependentUpon>
